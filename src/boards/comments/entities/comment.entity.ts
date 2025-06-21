@@ -2,8 +2,9 @@ import { IsString } from "class-validator";
 import { BoardModel } from "src/boards/entities/board.entity";
 import { BaseModel } from "src/common/entities/base.entity";
 import { UserModel } from "src/users/entities/user.entity";
-import { Column, ManyToOne } from "typeorm";
+import { Column, Entity, ManyToOne } from "typeorm";
 
+@Entity()
 export class CommentModel extends BaseModel {
     @Column()
     @IsString()
